@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  music-bot:
+    container_name: Discord-Music-Bot
+    build: ./music-bot-service
+    logging:
+      options:
+        max-size: 10m
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
+    ports:
+      - "4102:8080"
